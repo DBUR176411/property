@@ -1,0 +1,25 @@
+*{margin-left:1%;
+    margin-right: 2%;}
+    #id{background-color: rgb(255, 238, 205);}
+    #link{border: 2;background-color: rgb(255, 127, 127);
+        padding: 2%;
+    }
+    div{border: 3cm;
+    border-bottom-right-radius: 3ex;
+    background-color:rgba(223, 209, 211, 0.747);
+    }
+    #form{background-color: white;
+    border: black;
+    margin-top: 3px;}
+    .footer{
+        background-color: rgb(30, 226, 112);
+        margin-top: 00px;
+        text-align: center;
+    }
+    .tt{ margin-left: 20%;
+        background-color: whitesmoke;
+        padding: 2%;
+    }
+    #fo{
+        margin-top: 400px;background-color: azure;
+    }
