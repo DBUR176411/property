@@ -22,7 +22,7 @@
     <a href="view_request.php">View Request</a>
     <a href="searchitem.php">Search Item</a><a href=""></a>
     <a href="">login</a>
-    <a href="logout.php">logout</a>
+    <a href="..\logout.php">logout</a>
    </div>
    <?php
 include('..\config.php');

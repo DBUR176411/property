@@ -27,7 +27,7 @@
    <?php
 include('..\config.php');
 $item=$_POST['itemname'];
-$college=$_POST['college'];
+$college=$_POST['select'];
 $sql="select * from item where itemname='$item' and ollege_name='$college'";
 $result = mysqli_query($conn,"SELECT * FROM item where itemname='$item' and college_name='$college'");
 

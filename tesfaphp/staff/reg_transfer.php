@@ -19,7 +19,7 @@
 </table>
    </div> 
    <div id="link">
-    <a href="">home</a>
+    <a href="tranferrequest.php">transfer request</a>
     <a href=""></a>cancel request<a href="searchitem.php">search item</a>
     <a href="send_request.php">send request</a>
     <a href="logout.php">logout</a>
@@ -38,8 +38,8 @@ include '..\config.php';
           $qua = $_POST['quantity'];
           $date = $_POST['date'];
           $college=$_POST['select'];
-          $query="INSERT INTO transfer(req_id,s_id,s_name,itemname,quantity,date,college,reciver_id) 
-          VALUES('',$s_id','$s_name','$name','$qua','$date','$college','$r_id)";
+          $query="INSERT INTO transfer(s_id,s_name,itemname,quantity,requestdate,college,reciver_id,reciver_name) 
+          VALUES('$s_id','$s_name','$name','$qua','$date','$college','$r_id','$r_name')";
           $sql = mysqli_query($conn,$query);
           if ($sql==true)
            {

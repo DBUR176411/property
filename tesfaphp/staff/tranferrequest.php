@@ -20,7 +20,7 @@
    </div> 
    <div id="link">
     <a href="">home</a>
-    <a href=""></a><a href="searchitem.php">search item</a>
+    <a href="send_request.php">send requset</a><a href="searchitem.php">search item</a>
     <a href="">canle request</a>
     <a href="logout.php">logout</a>
    </div>

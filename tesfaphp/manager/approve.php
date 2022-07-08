@@ -1,7 +1,7 @@
 
 <?php
 include('..\config.php');
-$id=$_POST['ID'];
+
 
 ?> 
 <!DOCTYPE html>

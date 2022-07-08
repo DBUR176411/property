@@ -22,7 +22,7 @@
    <div id="link">
     <a href="view_request.php">View Request</a>
     <a href="searchitem.php">Search Item</a><a href=""></a>
-    <a href="view_request.php">view request</a>
+    <a href=""></a>
     <a href="logout.php">logout</a>
    </div>
    <div><br><br>

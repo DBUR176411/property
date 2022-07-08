@@ -36,26 +36,27 @@ $date=$_POST['date'];
 
 $accept="Accept";
 $reject="Reject";
+$delete=" delete from request_item where req_id='$req_id'";
 $acc="INSERT INTO approved_item(req_id,cus_id,cus_name,itemname,quantity,request_date,college_dean) 
 VALUES('$req_id','$cus_id','$cus_name','$item','$que','$date','$accept')";
 $rej="INSERT INTO approved_item(req_id,cus_id,cus_name,itemname,quantity,request_date,college_dean) 
 VALUES('$req_id','$cus_id','$cus_name','$item','$que','$date','$reject')";
 if(isset($_POST['accept']))
-{
+{ $dele=mysqli_query($conn,$delete);
   $re=mysqli_query($conn,$acc);
   if($re)
   echo "Accepted sussfull";
   else echo " data is not insertd";
 }
 if(isset($_POST['reject']))
-{
+{ $del=mysqli_query($conn,$delete);
 $re=mysqli_query($conn,$rej);
-if($re)
+if($re){
 echo "request is rejected";
 else echo "not data is insertd";
 }
 
-
+}
  ?>
 
     <div id="fo">

@@ -25,14 +25,25 @@
     <a href="logout.php">logout</a>
    </div>
    <div>
-		<form action="displayitem.php" method="post">
+		<form action="..\collegedean/displayitem.php" method="post">
 			item name
 			<input type="text" name="itemname"><br>
-			college
-			<input type="text" name="college">
-			<input type="submit" value="search">
+            college
+    <select name="select">
+    <option>select</option>
+    <option>computing</option>
+    <option >Enginering</option>
+    <option>FB</option>
+    <option >computional </option>
+     <option >Law</option>
+    </select><br>
+<input type="submit" name="search" value="search">
 		</form>
 	</div>
+
+
+
+    
     <div class="footer">
 	&copy; 2022 All Right Reserved
 </div>

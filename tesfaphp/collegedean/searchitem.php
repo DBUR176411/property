@@ -29,7 +29,14 @@
 			item name
 			<input type="text" name="itemname"><br>
 			college
-			<input type="text" name="college">
+			<select name="select">
+    <option>select</option>
+    <option>computing</option>
+    <option >Enginering</option>
+    <option>FB</option>
+    <option >computional </option>
+     <option >Law</option>
+    </select><br>
 			<input type="submit" value="search">
 		</form>
 	</div>

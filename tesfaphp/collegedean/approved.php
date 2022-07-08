@@ -31,36 +31,37 @@ $date=$_POST['date'];
     <a href="view_request.php">View Request</a>
     <a href="item.php">Search Item</a><a href=""></a>
     <a href="">login</a>
-    <a href="logout.php">logout</a>
+    <a href="..\logout.php">logout</a>
    </div>
    <div id="tt">
   <form action="approvedata.php" method="POST">
     <div>
       <lable for="form-group">request id
-        <input type="text" name="req_id" placeholder value="<?php echo $id;?>">
+        <input type="text" name="req_id" placeholder value="<?php echo $id;?>" readonly>
     </div><br>
   <div class="form-group">
       <label for="cus_id">cus_id:</label>
-      <input type="text"  name="cus_id" placeholder="Enter cus_id" value="<?php echo $p ;?>">
+      <input type="text"  name="cus_id" placeholder="Enter cus_id" value="<?php echo $p ;?>" readonly>
     </div><br>
     <div class="form-group">
       <label for="cus_name">cus_name :</label>
-      <input type="cus_name"  name="cus_name" placeholder="Enter cus_name" value="<?php echo $emp ;?>">
+      <input type="cus_name"  name="cus_name" placeholder="Enter cus_name" value="<?php echo $emp ;?>"readonly>
     </div><br>
     <div class="form-group">
       <label for="itemname">itemname :</label>
-      <input type="itemname"  name="itemname" placeholder="Enter itemname" value="<?php echo $item ;?>">
+      <input type="itemname"  name="itemname" placeholder="Enter itemname" value="<?php echo $item ;?>"readonly>
     </div><br>
     <div class="form-group">
       <label for="model">quantity:</label>
-      <input type="text" name="quantity" placeholder="Enter model" value="<?php echo $que ;?>">
+      <input type="text" name="quantity" placeholder="Enter model" value="<?php echo $que ;?>" readonly>
     </div><br>
     <div class="form-group">
       <label for="unit">request date:</label>
-      <input type="unit"  name="date" placeholder="Enter unit" value="<?php echo $date ;?>">
+      <input type="unit"  name="date" placeholder="Enter unit" value="<?php echo $date ;?>"readonly>
     </div><br>
     <input type="submit" name="accept"   value="accept">
     <input type="submit" name="reject" value="reject">
+    <input type="submit" name="delete" value="delete">
   </form>
 </div>
 </div>
