@@ -20,6 +20,7 @@ VALUES('$req_id','$cus_id','$cus_name','$itemid','$item','$quantity','$que','$da
  VALUES('$req_id','$cus_id','$cus_name','$itemid','$item','$quantity','$que','$date','$college','retuned')";
  $update="update  item set free=free+$quantity,onuse=onuse-$quantity where itemid='$itemid'";
  $updat="update borrowitem set quantity=quantity-$quantity WHERE borrow_id='$req_id'";
+ $sql2="DELETE FROM borrowitem WHERE quantity=0";
 
 if(isset($_POST['accept'])){ 
   $resalt=mysqli_query($conn,$sql);
@@ -34,6 +35,7 @@ if(mysqli_query($conn,$acc))
      if($dele)
 if($updatee&&$dele){
   echo "return sussfull";
+mysqli_query($conn,$sql2);
   }
   else echo " return  fall sessfull";
 

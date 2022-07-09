@@ -19,8 +19,8 @@
    </div> 
    <div id="link">
     <a href="">home</a>
-    <a href=""></a>contact us<a href="iteminsert.php">item register</a>
-    <a href="">login</a>
+    <a href="lostitem.php"></a>register losts<a href="iteminsert.php">item register</a>
+    <a href="borrow.php">register withdrl</a>
     <a href="logout.php">logout</a>
    </div>
    <?php

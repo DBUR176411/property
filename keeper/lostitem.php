@@ -26,7 +26,7 @@
    </div>
 
    <div class="container">
-  <form action="return.php" method="POST">
+  <form action="paidlostitem.php" method="POST">
   <div class="form-group">
       <label for="item name">borrow id:</label>
       <input type="text"  name="borrow_id" placeholder="Enter borrow id" required="">
