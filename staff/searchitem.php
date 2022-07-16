@@ -25,6 +25,7 @@
     <a href="logout.php">logout</a>
    </div>
    <div>
+
 		<form action="..\collegedean/displayitem.php" method="post">
 			item name
 			<input type="text" name="itemname"><br>
@@ -36,6 +37,7 @@
     <option>FB</option>
     <option >computional </option>
      <option >Law</option>
+     <option >agricalture</option>
     </select><br>
 <input type="submit" name="search" value="search">
 		</form>
