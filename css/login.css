@@ -1,0 +1,23 @@
+*{margin-left:1%;
+margin-right: 2%;}
+#id{background-color: rgb(255, 238, 205);}
+#link{border: 2;background-color: aquamarine;
+    padding: 2%;
+    text-align: right;
+    
+}
+div{border: 3cm;
+border-bottom-right-radius: 3ex;
+background-color:rgb(215, 223, 209);
+}
+#form{background-color: white;
+border: black;
+margin-top: 3px;
+margin-left: 50%;
+margin-right: 20%;}
+.footer{
+    background-color: bisque;
+    margin-top: 800px;
+    text-align: center;
+    
+}
