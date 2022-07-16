@@ -37,19 +37,19 @@ $date=$_POST['date'];
 $college=$_POST['select'];
 
 
-$sql="select quantity from item where itemid='$itemid' ";
+$sql="select * from item where itemid='$itemid' ";
 $resalt=mysqli_query($conn,$sql);
 $qua=mysqli_fetch_array($resalt);
-$true=$qua['quantity']>$que;
+$true=$qua['free']>=$que;
 if($true)
 if($resalt)
 {
-    $sub=$qua['quantity']-$que;
+    $sub=$qua['free']-$que;
 $acc="INSERT INTO borrowitem(cus_id,cus_name,itemid,itemname,model,quantity,price,date,college)
 VALUES('$cus_id','$cus_name','$itemid','$item','$model','$que','$price','$date','$college')";
-$update="update  item set free='$sub',onuse='$que'  where itemid='$itemid' ";
+$update="update  item set free=free-'$que',onuse=onuse+$que  where itemid='$itemid' ";
 
-if(isset($_POST['accept']))
+if(isset($_POST['withdral']))
 {
   $re=mysqli_query($conn,$acc);
  
@@ -58,11 +58,12 @@ if(isset($_POST['accept']))
 
   echo "borrow sussfull";
   }
-  else echo " data is not insertd";
+  else echo " withdrawl not sussfull please try again";
 }
 
 else echo "not data is insertd";
 }else echo "item is not free";
+else echo "not free ittem";
 
  ?>
  <div class="footer">

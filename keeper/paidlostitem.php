@@ -1,70 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>porperty</title>
-    <link rel="stylesheet" type="text/css" href="..\css/login.css"> 
-</head>
-<body>
-    <div>
-   <div id="id">
-<table>
-    <tr><td>
-    <img src="..\img/dbu.jfif" alt="not found" width="200px" height="100"></td>
-    <td><h1>property manegment sysyem</h1>
-    </td></tr>
-</table>
-   </div> 
-   <div id="link">
-    <a href="">home</a>
-    <a href=""></a>contact us<a href="">about us</a>
-    <a href="">login</a>
-    <a href="logout.php">logout</a>
-   </div>
-   <?php
+<?php
 
 include('..\config.php');
-$req_id=$_POST['req_id'];
+$req_id=$_POST['borrow_id'];
 $cus_id = $_POST['cus_id'];
 $cus_name = $_POST['cus_name'];
 $itemid=$_POST['itemid'];
 $item=$_POST['itemname'];
 $model=$_POST['model'];
-$que=$_POST['price'];
 $quantity=$_POST['quantity'];
+$que=$_POST['price'];
+$date=$_POST['date'];
 $college=$_POST['select'];
 
-$sql="update item set quantity=
-quantity-$quantity,nouse=onuse-$quantity where itemid='$itemid' ";
-$resalt=mysqli_query($conn,$sql);
+$sql="select * from borrowitem where borrow_id='$req_id'
+ and cus_id='$cus_id' and itemid='$itemid' and college='$college' ";
+ $acc="INSERT INTO return_item(borrow_id,cus_id,cus_name,itemid,itemname,quantity,price,returndate,college)
+VALUES('$req_id','$cus_id','$cus_name','$itemid','$item','$quantity','$que','$date','$college')";
+ $accc="INSERT INTO return_item(borrow_id,cus_id,cus_name,itemid,itemname,model,quantity,price,returndate,college) 
+ VALUES('$req_id','$cus_id','$cus_name','$itemid','$item','$quantity','$que','$date','$college','retuned')";
+ $update="update  item set quantity=quantity-$quantity,onuse=onuse-$quantity where itemid='$itemid'";
+ $updat="update borrowitem set quantity=quantity-$quantity WHERE borrow_id='$req_id'";
+
+if(isset($_POST['accept'])){ 
+  $resalt=mysqli_query($conn,$sql);
 if($resalt)
+{$check=mysqli_fetch_array($resalt);
+  $resa=$check['quantity']>=$quantity;
+  if($resa){
+if(mysqli_query($conn,$acc))
 {
-$acc="INSERT INTO borrowitem 
-VALUES('$req_id','$cus_id','$cus_name','$itemid','$item','$model','$que','$date','$college')";
-$update="update  item set status='lost' where itemid='$itemid'";
-
-if(isset($_POST['accept']))
-{
-  $re=mysqli_query($conn,$acc);
- 
-  if($re)
-  {$dele=mysqli_query($conn,$update);
-
-  echo "paid  Item price sussfull";
+    $dele=mysqli_query($conn,$update);
+    $updatee=mysqli_query($conn,$updat);
+     if($dele)
+if($updatee&&$dele){
+  echo "return sussfull";
   }
-  else echo " data is not insertd";
+  else echo " return  fall sessfull";
+
+
+else echo "no return succefull is insertd";
+}else echo "qquantity no correct";
+}else echo "not get";
+}else echo "not selescted";
 }
-
-else echo "not data is insertd";
-}else echo "item is not free";
-
  ?>
- <div class="footer">
-	&copy; 2022 All Right Reserved
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

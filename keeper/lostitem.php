@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +19,12 @@
    </div> 
    <div id="link">
     <a href="">home</a>
-    <a href="iteminsert.php">register item</a><a href="borrow.php">borrow item</a>
-    <a href=""></a>
-    <a href="..\logout.php">logout</a>
+    <a href="registerreturn.php"></a>retun item<a 
+    href="iteminsert.php">regiester item</a>
+    <a href="borrow.php">withdrawl item</a>
+    <a href="logout.php">logout</a>
    </div>
-   <div>
+
    <div class="container">
   <form action="return.php" method="POST">
   <div class="form-group">
@@ -36,8 +36,8 @@
       <input type="text"  name="cus_id" placeholder="Enter emp id" required="">
     </div>
     <div class="form-group">
-      <label for="Serial">customer name :</label>
-      <input type="Serial"  name="cus_name" placeholder="Enter name" required="">
+      <label for="cus_name">customer name :</label>
+      <input type="text"  name="cus_name" placeholder="Enter name" required="">
 
     </div>
     <div class="form-group">
@@ -49,23 +49,23 @@
       <input type="text"  name="itemname" placeholder="Enter itemname" required="">
     </div>
     <div class="form-group">
-      <label for="Serial">Serial :</label>
-      <input type="Serial"  name="Serial" placeholder="Enter Serial" required="">
+      <label for="quantity">quantity :</label>
+      <input type="number"  name="quantity" placeholder="Enter quantity" required="">
     </div>
     <div class="form-group">
       <label for="model">model :</label>
       <input type="text"  name="model" placeholder="Enter model" required="">
     </div>
     <div class="form-group">
-      <label for="quantity">quantity :</label>
-      <input type="number"  name="quantity" placeholder="Enter quantity" required="">
-    </div>
-    <div class="form-group">
       <label for="price">price:</label>
       <input type="decimal"  name="price" placeholder="Enter price" required="">
     </div>
-    <div>
-    College
+    <div class="form-group">
+      <label for="date">register date:</label>
+      <input type="date"  name="date" placeholder="Enter date" required="">
+
+    </div>
+    department
     <select name="select">
     <option>select</option>
     <option>computing</option>
@@ -73,13 +73,18 @@
     <option>FB</option>
     <option >computional </option>
      <option >Law</option>
-    </select><br></div>
-    <input type="submit" name="accept"  style="float:center;" value="lost item">
+    </select><br>
+    <input type="submit" name="accept"  style="float:center;" value="borrow">
     <input type="reset" value="cancle">
   </form>
 </div>
 
-   </div>
-   </div>
+
+
+<div class="footer">
+	&copy; 2022 All Right Reserved
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

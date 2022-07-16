@@ -12,8 +12,8 @@
     border: black;
     margin-top: 3px;}
     .footer{
-        background-color: rgb(30, 226, 112);
-        margin-top: 00px;
+        background-color: rgb(15, 231, 91);
+        margin-top: 400px;
         text-align: center;
     }
     .tt{ margin-left: 20%;
@@ -21,5 +21,5 @@
         padding: 2%;
     }
     #fo{
-        margin-top: 400px;background-color: azure;
+        margin-top: 800px;background-color: azure;
     }

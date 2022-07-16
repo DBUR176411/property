@@ -28,7 +28,7 @@
 include('..\config.php');
 $item=$_POST['itemname'];
 $college=$_POST['select'];
-$sql="select * from item where itemname='$item' and ollege_name='$college'";
+$sql="select * from item where itemname='$item' and college_name='$college'";
 $result = mysqli_query($conn,"SELECT * FROM item where itemname='$item' and college_name='$college'");
 
 ?>
@@ -46,6 +46,8 @@ if ($row = mysqli_num_rows($result)) {
     <td>price </td>
     <td>register date </td>
 	<td>college</td>
+    <td>free</td>
+    <td>onuse</td>
   </tr>
 <?php
 $i=0;
@@ -53,11 +55,13 @@ while($row = mysqli_fetch_array($result)) {
 ?>
 <tr><td><?php echo $row["itemid"];?></td>
     <td><?php echo $row["itemname"]; ?></td>
-    <td><?php echo $row["serialNo"]; ?></td>
+    <td><?php echo $row["itemid"]; ?></td>
     <td><?php echo $row["model"]; ?></td>
     <td><?php echo $row["price"]; ?></td>
     <td><?php echo $row["register_date"]; ?></td>
 	<td><?php echo $row["college_name"]; ?></td>
+    <td><?php echo $row["free"]; ?></td>
+    <td><?php echo $row["onuse"]; ?></td>
 </tr>
 <?php
 $i++; 

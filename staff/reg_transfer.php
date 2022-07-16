@@ -46,7 +46,7 @@ include '..\config.php';
               
               echo "request transfer !";
           }else{
-              echo "request failed try again!";
+              echo "request failed plaese try again!";
           }
 
 ?>

@@ -19,8 +19,9 @@
    </div> 
    <div id="link">
     <a href="">home</a>
-    <a href=""></a>contact us<a href="">about us</a>
-    <a href="">login</a>
+    <a href="registerreturn.php"></a>retun item<a 
+    href="iteminsert.php">regiester item</a>
+    <a href="borrow.php">withdrawl item</a>
     <a href="logout.php">logout</a>
    </div>
 
@@ -35,8 +36,8 @@
       <input type="text"  name="cus_id" placeholder="Enter emp id" required="">
     </div>
     <div class="form-group">
-      <label for="Serial">customer name :</label>
-      <input type="Serial"  name="cus_name" placeholder="Enter name" required="">
+      <label for="cus_name">customer name :</label>
+      <input type="text"  name="cus_name" placeholder="Enter name" required="">
 
     </div>
     <div class="form-group">
@@ -48,8 +49,8 @@
       <input type="text"  name="itemname" placeholder="Enter itemname" required="">
     </div>
     <div class="form-group">
-      <label for="Serial">Serial :</label>
-      <input type="Serial"  name="Serial" placeholder="Enter Serial" required="">
+      <label for="quantity">quantity :</label>
+      <input type="number"  name="quantity" placeholder="Enter quantity" required="">
     </div>
     <div class="form-group">
       <label for="model">model :</label>

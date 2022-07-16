@@ -19,8 +19,9 @@
    </div> 
    <div id="link">
     <a href="">home</a>
-    <a href=""></a>contact us<a href="">about us</a>
-    <a href="">login</a>
+    <a href="registerreturn.php"></a>retun item<a 
+    href="iteminsert.php">regiester item</a>
+    <a href="borrow.php">withdrawl item</a>
     <a href="logout.php">logout</a>
    </div>
    <div class="container">
@@ -69,7 +70,7 @@
     <option >computional </option>
      <option >Law</option>
     </select><br>
-    <input type="submit" name="accept"  style="float:center;" value="borrow">
+    <input type="submit" name="withdral"  style="float:center;" value="borrow">
     <input type="reset" value="cancle">
   </form>
 </div>

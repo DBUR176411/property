@@ -19,9 +19,10 @@
 </table>
    </div> 
    <div id="link">
-    <a href="">home</a>
-    <a href=""></a>register<a href="">about us</a>
-    <a href="">login</a>
+    <a href="">register lost item</a>
+    <a href="registerreturn.php"></a>retun item<a 
+    href="iteminsert.php">regiester item</a>
+    <a href="borrow.php">withdrawl item</a>
     <a href="logout.php">logout</a>
    </div>
    <div>
